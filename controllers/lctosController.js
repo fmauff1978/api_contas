@@ -2,7 +2,7 @@ const db = require('../models')
 const database = require('../models')
 
 
-class agregadoController {
+class lctosController {
 
 
     //static -> este metodo pode ser chamado sem criar uma nova instancia de classe (um "new controller")
@@ -11,7 +11,7 @@ class agregadoController {
     static async listarTodasContas(req, res) {
 
        try {
-            const todasAsContas = await database.a2023agregados.findAll()
+            const todasAsContas = await database.a2023lctos.findAll()
          return res.status(200).json(todasAsContas)
       } catch (error) {
          return res.status(500).json(error.message)
@@ -31,4 +31,4 @@ class agregadoController {
 
 
 
-module.exports = agregadoController
+module.exports = lctosController

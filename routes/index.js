@@ -3,6 +3,8 @@ const contas = require ('./contasRoutes')
 const posicao = require ('./posicaoRoutes')
 const agregados = require ('./agregadosRoutes')
 const quoc = require ('./quocRoutes')
+const lctos = require('./lctosRoutes')
+const listacontas = require ('./listacontas2023Routes')
 
 
 module.exports = app =>{
@@ -17,6 +19,12 @@ module.exports = app =>{
     app.use(agregados)
 
     app.use(quoc)
+
+    app.use(lctos)
+
+    app.use(listacontas)
+
+
 
    
     
